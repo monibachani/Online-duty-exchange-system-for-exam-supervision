@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard</title>
+        <!-- Bootstrap Styles-->
+        <link href="static/assets/css/bootstrap.css" rel="stylesheet" />
+        <!-- FontAwesome Styles-->
+        <link href="static/assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- Morris Chart Styles-->
+        <link href="static/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+            <!-- Custom Styles-->
+        <link href="static/assets/css/custom-styles.css" rel="stylesheet" />
+            <!-- TABLE STYLES-->
+            <link href="static/assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+        <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    
+    
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+        
+        <link rel="stylesheet" href="static/assets/fonts/icomoon/style.css">
+    
+        <link href='static/assets/fullcalendar/packages/core/main.css' rel='stylesheet' />
+        <link href='static/assets/fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
+        
+    </head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="myDuty"><strong>Duty Portal</strong></a>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a type= "button" href="profile" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> 
+                    </a>
+                    
+                </li>
+                <!-- /.dropdown -->
+                  <li class="dropdown">
+                    <a onclick="myFunction()" type= "button" href="/logout" aria-expanded="false">
+                        <i class="fa fa-sign-out fa-fw"></i> 
+                    </a>
+                    
+                </li>
+            </ul>
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a href="myDuty"><i class="fa fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="AllDuties"><i class="fa fa-table"></i>Exchange portal</a>
+                    </li>
+                    <li>
+                        <a href="xrequest1"> <i class="fa fa-edit"></i> Request page</a>
+                    </li>   
+					<li>
+                        <a href="calendar" class="active-menu"><i class="fa fa-calendar"></i> Calendar</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+		  <div class="header"> 
+                        <h1 class="page-header">
+                        Calendar 
+                        </h1>
+		
+		</div>
+            <div id="page-inner"> 
+                    <div class="content">
+                        <div id='calendar'></div>
+                    </div>
+                    
+
+                    <div class="content">
+                        <div id='calendar'></div>
+                    </div>
+                        
+                        
+
+                        <script src="static/assets/js/jquery-3.3.1.min.js"></script>
+                        <script src="static/assets/js/popper.min.js"></script>
+                        <script src="static/assets/js/bootstrap.min.js"></script>
+
+                        <script src='static/assets/fullcalendar/packages/core/main.js'></script>
+                        <script src='static/assets/fullcalendar/packages/interaction/main.js'></script>
+                        <script src='static/assets/fullcalendar/packages/daygrid/main.js'></script>
+
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                        var calendarEl = document.getElementById('calendar');
+
+                        var calendar = new FullCalendar.Calendar(calendarEl, {
+                        plugins: [ 'interaction', 'dayGrid' ],
+                        defaultDate: '2022-05',
+                        editable: true,
+                        eventLimit: true, // allow "more" link when too many events
+
+                        });
+
+                        calendar.render();
+                    });
+
+                        </script>
+
+                        <script src="static/assets/js/main.js"></script>
+                        
+            
+                
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
+     <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="static/assets/js/jquery-1.10.2.js"></script>
+      <!-- Bootstrap Js -->
+    <script src="static/assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="static/assets/js/jquery.metisMenu.js"></script>
+     <!-- Morris Chart Js -->
+     <script src="static/assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="static/assets/js/morris/morris.js"></script>
+
+    	
+	<script src="static/assets/js/easypiechart.js"></script>
+	<script src="static/assets/js/easypiechart-data.js"></script>
+	
+	 <script src="static/assets/js/Lightweight-Chart/jquery.chart.js"></script>
+
+
+     <script>
+        function myFunction() {
+          alert("You have successfully logged out!");
+        }
+        </script>
+      <!-- Custom Js -->
+    <script src="static/assets/js/custom-scripts.js"></script>
+    
+   
+</body>
+</html>
